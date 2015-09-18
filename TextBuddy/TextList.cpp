@@ -77,6 +77,10 @@ void TextList::clearList(string destination) {
 	cout << UPDATE_CLEAR << destination << endl;
 }
 
-void TextList::sortList() {
+bool lexicographic(string str1, string str2) {
+	return (str1 < str2);
+}
 
+void TextList::sortList() {
+	sort(_texts.begin(), _texts.end(), lexicographic);
 }
