@@ -86,5 +86,20 @@ void TextList::sortList() {
 }
 
 string TextList::searchList(string keyword) {
+	int size = keyword.size();
 
+	if (_numOfTexts > 0) {
+		for (int i = 0; i < _numOfTexts; i++) {
+			for (int j = 0; j < _texts[i].size(); j++) {
+				if (_texts[i].substr(j, size) == keyword) {
+					return _texts[i];
+				}
+			}
+		}
+	}
+	else {
+		return UPDATE_EMPTYLIST;
+	}
+
+	return UPDATE_NOT_FOUND;
 }

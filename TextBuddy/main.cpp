@@ -18,7 +18,8 @@ const string CMD_DISPLAY = "display";
 const string CMD_DELETE = "delete";
 const string CMD_CLEAR = "clear";
 const string CMD_EXIT = "exit";
-
+const string CMD_SORT = "sort";
+const string CMD_SEARCH = "search";
 
 void processCommand(string destination, string cmd, TextList* list);
 void initializeList(string source, TextList* list);
@@ -69,6 +70,16 @@ void processCommand(string destination, string cmd, TextList* list) {
 	}
 	else if (cmd == CMD_CLEAR) {
 		list->clearList(destination);
+	}
+	else if (cmd == CMD_SORT) {
+		list->sortList();
+	}
+	else if (cmd == CMD_SEARCH) {
+		string keyword;
+
+		cin >> keyword;
+
+		cout << list->searchList(keyword) << endl;
 	}
 	
 }
