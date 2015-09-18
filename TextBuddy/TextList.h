@@ -31,5 +31,5 @@ public:
 	void deleteText(string destination, int number);	//to delete text from the vector
 	void clearList(string destination);					//to empty the vector
 	void sortList();									//to sort the list in alphabetical order
-
+	string searchList(string keyword);					//to search for the keyword in the list
 };

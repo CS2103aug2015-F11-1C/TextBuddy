@@ -84,3 +84,7 @@ bool lexicographic(string str1, string str2) {
 void TextList::sortList() {
 	sort(_texts.begin(), _texts.end(), lexicographic);
 }
+
+string TextList::searchList(string keyword) {
+
+}

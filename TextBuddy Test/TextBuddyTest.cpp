@@ -34,5 +34,18 @@ namespace TextBuddyTest{
 				Assert::AreEqual(Expected[i], List.getText(i));
 			}
 		}
+
+		TEST_METHOD(searchList_Test) {
+			TextList List;
+
+			List.addText("myfile.txt", "little brown fox");
+			List.addText("myfile.txt", "jumping over the moon");
+
+			string actual = List.searchList("moon");
+
+			string expected = "jumping over the moon";
+
+			Assert::AreEqual(expected, actual);
+		}
 	};
 }
