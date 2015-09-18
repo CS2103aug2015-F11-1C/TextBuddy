@@ -76,3 +76,7 @@ void TextList::clearList(string destination) {
 
 	cout << UPDATE_CLEAR << destination << endl;
 }
+
+void TextList::sortList() {
+
+}

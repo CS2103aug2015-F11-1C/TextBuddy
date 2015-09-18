@@ -30,5 +30,6 @@ public:
 	void addText(string destination, string text);		//to add texts to the vector
 	void deleteText(string destination, int number);	//to delete text from the vector
 	void clearList(string destination);					//to empty the vector
+	void sortList();									//to sort the list in alphabetical order
 
 };
